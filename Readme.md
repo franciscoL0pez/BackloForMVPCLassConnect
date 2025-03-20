@@ -1,6 +1,6 @@
 
 # ClassConnect
-MVP Ing de Soft II - 12025
+MVP Ing de Soft II - 1C2025
 
 ## Integrantes:
 
