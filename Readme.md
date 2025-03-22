@@ -2,11 +2,11 @@
 
 ##  Integrantes
 
-1. [Martin Wainwright](https://github.com/wain02) 👨‍💻
-2. [Francisco Lopéz](https://github.com/franciscoL0pez) 👨‍💻
-3. [Koo, Hangyeol](https://github.com/claudekoo) 👨‍💻
-4. [Nicolás Natale](https://github.com/Igris-1) 👨‍💻
-5. [Matias Rea](https://github.com/immlacrea) 👨‍💻
+1. [Martin Wainwright](https://github.com/wain02) 
+2. [Francisco Lopéz](https://github.com/franciscoL0pez) 
+3. [Koo, Hangyeol](https://github.com/claudekoo) 
+4. [Nicolás Natale](https://github.com/Igris-1) 
+5. [Matias Rea](https://github.com/immlacrea) 
 
 #### 📝 Corrector
 - [GitHub](https://github.com/) 🔍
