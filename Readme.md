@@ -4,12 +4,15 @@ MVP Ing de Soft II - 1C2025
 
 ## Integrantes:
 
-1. Martin wainwright- [GitHub](https://github.com/)
+1. Martin wainwright- [GitHub](https://github.com/wain02)
 
 2. Francisco Lopéz - [GitHub](https://github.com/franciscoL0pez)
 
-3. Koo, Hangyeol  - [GitHub](https://github.com/)
+3. Koo, Hangyeol  - [GitHub](https://github.com/claudekoo)
 
+4- Nicolás Natale - [GitHub](https://github.com/Igris-1)
+
+5- Matias Rea - [GitHub](https://github.com/immlacrea)
 
 
 #### Corrector: 
