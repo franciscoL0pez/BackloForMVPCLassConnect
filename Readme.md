@@ -1,29 +1,35 @@
+# 📚 ClassConnect MVP Ing de Soft II - 1C2025
 
-# ClassConnect
-MVP Ing de Soft II - 1C2025
+##  Integrantes
 
-## Integrantes:
+1. [Martin Wainwright](https://github.com/wain02) 👨‍💻
+2. [Francisco Lopéz](https://github.com/franciscoL0pez) 👨‍💻
+3. [Koo, Hangyeol](https://github.com/claudekoo) 👨‍💻
+4. [Nicolás Natale](https://github.com/Igris-1) 👨‍💻
+5. [Matias Rea](https://github.com/immlacrea) 👨‍💻
 
-1. Martin wainwright- [GitHub](https://github.com/wain02)
-
-2. Francisco Lopéz - [GitHub](https://github.com/franciscoL0pez)
-
-3. Koo, Hangyeol  - [GitHub](https://github.com/claudekoo)
-
-4- Nicolás Natale - [GitHub](https://github.com/Igris-1)
-
-5- Matias Rea - [GitHub](https://github.com/immlacrea)
-
-
-#### Corrector: 
--  - [GitHub](https://github.com/)
+#### 📝 Corrector
+- [GitHub](https://github.com/) 🔍
 
 ---
 
-## Instalación y Ejecución del proyecto
+## ⚙️ Instalación y Ejecución del Proyecto
 
-- Instalar `node.js` y `npm` en su sistema. [Descargar](https://nodejs.org/en/download/package-manager)
-- Correr el comando `npm install` en la carpeta raíz del proyecto para instalar las dependencias.
+### 1. Instalar `node.js` y `npm` en tu sistema
+   - Puedes descargarlo desde [aquí](https://nodejs.org/en/download/package-manager) 🌐
 
-  ## Link a vercer para correr el proyecto 
--  [Acceder]()
+### 2. Instalar las dependencias
+   - Ejecuta el siguiente comando en la carpeta raíz del proyecto:
+     ```bash
+     npm install
+     ```
+
+---
+
+## 🌍 Enlace para Acceder al Proyecto
+
+- [🔗 Acceder al Proyecto](<inserte enlace aquí>)
+
+---
+
+
