@@ -52,7 +52,7 @@
      
 ### 3. Instalar React Native
    - Ejecuta el siguiente comando en la carpeta raíz del proyecto:
-   - 
+   
      ```bash
      npm install -g react-native-cli
 
