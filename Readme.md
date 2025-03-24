@@ -17,7 +17,7 @@
 
 ### 🌐 Frontend  
 - **Lenguaje:** JavaScript  
-- **Framework/Librería:** React Native
+- **Framework/Librería:** React Native, Node js
 
 ### ⚙️ Backend  
 - **Lenguaje:** Go  
@@ -35,18 +35,28 @@
 - **Mensajería SMS/WhatsApp:** Twilio
 
 ### 🚨 Monitoreo
- - **Libreria **: 
+ - **Libreria **:
+
+   
 ## ⚙️ Instalación y Ejecución del Proyecto
 
 ### 1. Instalar `node.js` y `npm` en tu sistema
    - Puedes descargarlo desde [aquí](https://nodejs.org/en/download/package-manager) 🌐
+
 
 ### 2. Instalar las dependencias
    - Ejecuta el siguiente comando en la carpeta raíz del proyecto:
      ```bash
      npm install
      ```
+     
+### 3. Instalar React Native
+   - Ejecuta el siguiente comando en la carpeta raíz del proyecto:
+   - 
+     ```bash
+     npm install -g react-native-cli
 
+     ```
 ---
 
 ## 🌍 Enlace para Acceder al Proyecto
