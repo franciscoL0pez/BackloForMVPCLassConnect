@@ -25,7 +25,7 @@
 - **Bases de datos:** PostgreSQL y Mongo
 
 ### 🗄️ Backoffice Web  
-- **Framework:** React o Next
+- **Framework:** Next.js
 
 ### 📦 Almacenamiento de Contenido Multimedia  
 - **Servicio:** Firebase
@@ -35,7 +35,7 @@
 - **Mensajería SMS/WhatsApp:** Twilio
 
 ### 🚨 Monitoreo
- - **Libreria **:
+ - **Libreria **: Prometheus y Grafana
 
    
 ## ⚙️ Instalación y Ejecución del Proyecto
