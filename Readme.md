@@ -11,8 +11,31 @@
 #### 📝 Corrector
 - [GitHub](https://github.com/) 🔍
 
----
 
+
+## 🛠 Tecnologías
+
+### 🌐 Frontend  
+- **Lenguaje:** JavaScript  
+- **Framework/Librería:** React Native
+
+### ⚙️ Backend  
+- **Lenguaje:** Go  
+- **Framework:** Gin
+- **Bases de datos:** PostgreSQL y Mongo
+
+### 🗄️ Backoffice Web  
+- **Framework:** React o Next
+
+### 📦 Almacenamiento de Contenido Multimedia  
+- **Servicio:** Firebase
+
+### 🔔 Notificaciones y Mensajería  
+- **Push Notifications:** Cloud Messaging
+- **Mensajería SMS/WhatsApp:** Twilio
+
+### 🚨 Monitoreo
+ - **Libreria **: 
 ## ⚙️ Instalación y Ejecución del Proyecto
 
 ### 1. Instalar `node.js` y `npm` en tu sistema
@@ -31,5 +54,6 @@
 - [🔗 Acceder al Proyecto](<inserte enlace aquí>)
 
 ---
+
 
 
