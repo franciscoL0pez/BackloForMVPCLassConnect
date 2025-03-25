@@ -2,14 +2,8 @@
 
 package main
 
-import (
-
-	"github.com/franciscoL0pez/MVPCLassConnect/backend/dbConfig"
-)
-
+// import "MVPCLassConnect/backend/dbConfig/postgres"
+// import "MVPCLassConnect/backend/dbConfig/mongo"
 func main() {
-	
-	dbConfig.ConnectDB()
-	defer dbConfig.CloseDB()
 
 }

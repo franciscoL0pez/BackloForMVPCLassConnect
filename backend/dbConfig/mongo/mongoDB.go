@@ -1,6 +1,4 @@
-// create a connect to mongo db
-
-package dbConfig
+package mongo
 
 import (
 	"context"
