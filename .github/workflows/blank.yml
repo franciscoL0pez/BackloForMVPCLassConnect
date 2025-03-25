@@ -17,7 +17,11 @@ jobs:
         image: mongo:latest
         ports:
           - 27017:27017
-        options: --health-cmd "curl --silent --fail localhost:27017" --health-interval 10s --health-timeout 5s --health-retries 3
+        options: >-
+          --health-cmd "mongosh --eval 'db.runCommand({ ping: 1 })'"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
 
     steps:
       - name: Checkout repository
@@ -31,5 +35,15 @@ jobs:
       - name: Install dependencies
         run: go mod tidy
 
+      - name: Definir variables de entorno
+        run: echo "MONGO_URI=mongodb://localhost:27017" >> $GITHUB_ENV
+
+      - name: Esperar a que MongoDB esté listo
+        run: |
+          until mongosh --eval "db.runCommand({ ping: 1 })"; do
+            echo "Esperando a MongoDB..."
+            sleep 2
+          done
+
       - name: Run unit tests
-        run: go test ./backend/test -v
+        run: go test -v ./backend/test
