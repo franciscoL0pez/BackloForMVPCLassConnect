@@ -4,7 +4,7 @@ package main
 
 import (
 
-	"github.com/franciscoL0pez/MVPCLassConnect/backend/dbConfig/"
+	"github.com/franciscoL0pez/MVPCLassConnect/backend/dbConfig"
 )
 
 func main() {
