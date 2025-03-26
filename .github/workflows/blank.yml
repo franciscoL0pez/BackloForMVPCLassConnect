@@ -45,4 +45,8 @@ jobs:
       - name: Run unit tests
         run: go test -v ./backend/test
 
-
+      - name: Upload Coverage Reports to CodeCov
+        uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: ${{ github.repository }}
