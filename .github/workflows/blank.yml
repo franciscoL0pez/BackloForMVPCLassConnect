@@ -19,6 +19,10 @@ jobs:
           - 27017:27017
 
     steps:
+
+      - name: Listar archivos generados (debug)
+        run: ls -R
+        
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -66,7 +70,7 @@ jobs:
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          files: coverage-go.out,coverage-python.xml  # Subir ambos reportes
+          files: ./coverage-go.out, ./coverage-python.xml
           fail_ci_if_error: true
-
-        
+          verbose: true
+          
