@@ -19,12 +19,11 @@ jobs:
           - 27017:27017
 
     steps:
-
-      - name: Listar archivos generados (debug)
-        run: ls -R
-        
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Listar archivos después del checkout (debug)
+        run: ls -R
 
       - name: Set up Go
         uses: actions/setup-go@v4
@@ -32,7 +31,8 @@ jobs:
           go-version: 1.22.2
 
       - name: Install Go dependencies
-        run: go mod tidy
+        run: |
+          cd backend && go mod tidy
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -42,8 +42,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           pip install --upgrade pip
-          pip install pytest
-          pip install pytest coverage  # Asegura que coverage.py esté instalado
+          pip install pytest coverage
           pip install -r requirements.txt || echo "No requirements.txt found"
 
       - name: Definir variables de entorno
@@ -59,18 +58,31 @@ jobs:
           echo "MongoDB no se inició a tiempo" && exit 1
 
       - name: Run Go unit tests with coverage
-        run: go test -coverprofile=coverage-go.out -v ./backend/test
+        run: |
+          echo "Ejecutando tests de Go..."
+          go test -coverprofile=backend/coverage-go.out -v ./backend/... || (echo "Go tests failed" && exit 1)
 
       - name: Run Python unit tests with coverage
         run: |
-          coverage run -m pytest ./backend/test
-          coverage xml -o coverage-python.xml  # Genera un XML compatible con Codecov
+          echo "Ejecutando tests de Python..."
+          coverage run -m pytest ./backend/test || (echo "Python tests failed" && exit 1)
+          coverage xml -o backend/coverage-python.xml
+
+      - name: Verificar archivos de cobertura generados
+        run: |
+          echo "Archivos en el directorio actual:"
+          ls -lah
+          echo "Contenido de backend/coverage-go.out:"
+          cat backend/coverage-go.out || echo "El archivo backend/coverage-go.out no existe"
+          echo "Contenido de backend/coverage-python.xml:"
+          cat backend/coverage-python.xml || echo "El archivo backend/coverage-python.xml no existe"
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          files: ./coverage-go.out, ./coverage-python.xml
+          files: backend/coverage-go.out, backend/coverage-python.xml
           fail_ci_if_error: true
           verbose: true
+
           
