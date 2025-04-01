@@ -1,4 +1,4 @@
-name: Go CI for ClassConnect API
+name: Go & Python CI for ClassConnect API
 
 on:
   push:
@@ -27,8 +27,16 @@ jobs:
         with:
           go-version: 1.22.2
 
-      - name: Install dependencies
+      - name: Install Go dependencies
         run: go mod tidy
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt || echo "No requirements.txt found"
 
       - name: Definir variables de entorno
         run: echo "MONGO_URI=mongodb://localhost:27017" >> $GITHUB_ENV
@@ -42,14 +50,16 @@ jobs:
           done
           echo "MongoDB no se inició a tiempo" && exit 1
 
-      - name: Run unit tests
+      - name: Run Go unit tests
         run: go test -v ./backend/test
+
+      - name: Run Python unit tests
+        run: pytest ./backend/test
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           file: coverage.out
-     
 
         
