@@ -53,16 +53,19 @@ jobs:
           done
           echo "MongoDB no se inició a tiempo" && exit 1
 
-      - name: Run Go unit tests
-        run: go test -v ./backend/test
+      - name: Run Go unit tests with coverage
+        run: go test -coverprofile=coverage-go.out -v ./backend/test
 
-      - name: Run Python unit tests
-        run: pytest ./backend/test
+      - name: Run Python unit tests with coverage
+        run: |
+          coverage run -m pytest ./backend/test
+          coverage xml -o coverage-python.xml  # Genera un XML compatible con Codecov
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          file: coverage.out
+          files: coverage-go.out,coverage-python.xml  # Subir ambos reportes
+          fail_ci_if_error: true
 
         
