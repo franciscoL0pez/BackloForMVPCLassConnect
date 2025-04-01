@@ -39,6 +39,7 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install pytest
+          pip install pytest coverage  # Asegura que coverage.py esté instalado
           pip install -r requirements.txt || echo "No requirements.txt found"
 
       - name: Definir variables de entorno
